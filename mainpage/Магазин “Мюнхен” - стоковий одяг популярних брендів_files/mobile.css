@@ -1,7 +1,7 @@
 @media(max-width: 991px){
   
   /* def's */
-  body, .slider_shadow, .cycle-slideshow, .slider_shadow_page, .slide, .footer, .footer_border, .top_bg{
+  body, .slider_shadow, .cycle-slideshow, .slider_shadow_page, .slide, .footer, .top_bg, .footer_menu{
     width: 100%;
     min-width: 100%;
   }
@@ -24,6 +24,87 @@
     padding: 0 15px 30px;
     width: calc(100% - 30px);
     background: none;
+  }
+
+  /* 
+    Footer 
+    ======
+  */
+  .footer_border{
+    margin: 0 15px;
+    width: calc(100% - 30px);
+    background-position: left top;
+  }
+
+  /* footer menu*/
+  .footer_menu{
+    text-align: center;
+    height: auto;
+    padding: 22px 0;
+  }
+  .footer_menu_wrp{
+    background: #c01027;
+    border-bottom: 0;
+  }
+  .footer_menu ul li{
+    float: none;
+    display: inline-block;
+  }
+    .footer_menu ul li a{
+      font-size: 18px;
+      line-height: 30px;
+      color: #fefeff;
+    }
+  
+  /* logo */
+  .footer .grid_935{ text-align: center;}
+  .footer a.logo{
+    float: none;
+    margin: 25px auto;
+    display: inline-block;
+    height: auto;
+  }
+    .footer img.logo{
+      width: 125px;
+      height: auto;
+      float: none;
+      margin: 0;
+    }
+
+  /* text */
+  .footer_text{
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0 0 25px;
+  }
+
+  /* contacts*/
+  .footer_contacts{
+    font-size: 12px;
+    line-height: 19px;
+    padding: 20px 0;
+  }
+  .footer_contacts .e-mail_wrp,
+  .footer_contacts .phone{
+    width: 100%;
+  }
+  .footer_contacts .e-mail_wrp{
+    margin-bottom: 10px;
+  }
+
+  /* copyrights */
+  .copyright{
+    padding: 25px 15px;
+    text-align: left;
+    font-size: 11px;
+    line-height: 20px;
+  }
+    .copyright a{
+      display: inline-block;
+    }
+  .copyright .welldo_logo{
+    right: -30px;
+    top: 0;
   }
 
 }
