@@ -1,0 +1,29 @@
+@media(max-width: 991px){
+  
+  /* def's */
+  body, .slider_shadow, .cycle-slideshow, .slider_shadow_page, .slide, .footer, .footer_border, .top_bg{
+    width: 100%;
+    min-width: 100%;
+  }
+  .grid_1000{
+    width: 100%;
+  }
+  .grid_935{
+    padding: 0 15px;
+    width: calc(100% - 30px);
+  }
+
+  .right_content{
+    float: left;
+    width: 100%;
+    padding: 0;
+    background: none;
+  }
+  .new_items{
+    float: left;
+    padding: 0 15px 30px;
+    width: calc(100% - 30px);
+    background: none;
+  }
+
+}
