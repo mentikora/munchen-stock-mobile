@@ -1,6 +1,19 @@
+.mobile_nav{
+  height: 0;
+  overflow: hidden;
+
+  transition: height .25s;
+} 
+.mobile_nav_btn{
+  display: none;
+}
+
 @media(max-width: 991px){
   
   /* def's */
+  body{
+    background: #fff;
+  }
   body, .slider_shadow, .cycle-slideshow, .slider_shadow_page, .slide, .footer, .top_bg, .footer_menu{
     width: 100%;
     min-width: 100%;
@@ -26,7 +39,115 @@
     background: none;
   }
 
-  /* item */
+  /*
+    Header
+    ======
+  */
+  .top_bg{
+    padding-top: 0;
+  }
+  header{
+    background: #fff;
+    height: 60px;
+  }
+    header a{
+      margin-top: 10px;
+      display: block;
+      float: left;
+    }
+    header img{
+      width: 125px;
+      height: auto;
+    }
+    .header .social, 
+    .header .contacts{ display: none; }
+
+    .mobile_nav_btn{
+      display: block;
+      float: right;
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+      margin: 23px 15px 0 0;
+      position: relative;
+    }
+
+    .mobile_nav_btn span{
+      position: relative;
+      display: block;
+      height: 2px;
+      background: #898989;
+      margin-bottom: 3px;
+      border-radius: 2px;
+      box-shadow: 0 0 1px 0 #898989;
+
+      transition: all .25s;
+    }
+    .mobile_nav_btn.active span:first-child,
+    .mobile_nav_btn.active span:last-child{
+      top: 7px;
+      left: 0;
+      width: 100%;
+      position: absolute;
+    }
+    
+    .mobile_nav_btn.active span:first-child{
+      transform: rotate(45deg);
+    }
+    .mobile_nav_btn.active span:last-child{
+      transform: rotate(-45deg);
+    }
+    .mobile_nav_btn.active span:nth-child(even){
+      display: none;
+    }
+
+  .slider_shadow{
+    background: none;
+    padding: 0;
+    margin: 0 0 30px;
+  }
+
+  /* 
+    MainNavigation
+    ==============
+  */
+  nav{
+    display: none;
+  }
+
+  .mobile_nav{
+    background: #c01027;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+  }
+    .mobile_nav.active{
+      height: 357px;
+    }
+    .mobile_nav li{
+      border-top: 1px solid #fff;
+    }
+      .mobile_nav li:last-child a{
+        color: #c01027;
+        background: #fbcb33;
+      }
+    .mobile_nav a{
+      display: block;
+      padding: 0 15px;
+      height: 50px;
+      line-height: 50px;
+      
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #fff;
+      font-family: "Louis-Demi", sans-serif;
+    }
+    
+
+  /* 
+    Item 
+    ====
+  */
   .item_img{
     width: 100%;
     height: calc(100% - 45px);
