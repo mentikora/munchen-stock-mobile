@@ -45,6 +45,7 @@
   */
   .top_bg{
     padding-top: 0;
+    background: #fff;
   }
   header{
     background: #fff;
@@ -211,7 +212,6 @@
   .brands{
     margin-left: 0;
     width: 60px;
-    padding: 0 5px;
 
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -345,4 +345,151 @@
     top: 0;
   }
 
+  /*
+    CATEGORY
+    ========
+  */
+  .slider_shadow_page{
+    background: 0;
+    padding: 0;
+    margin: 0 0 30px;
+  }
+  
+
+  /*
+    BRAND
+    =====
+  */
+  .brand_content{
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    width: calc(100% - 60px);
+  }
+
+  .brand_content .brand_position{
+    order: 1;
+    width: 100%;
+    background: none;
+    padding-bottom: 30px;
+  }
+    .brand_position p{
+      padding: 0;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  .brand_content .right_content{
+    order: 2;
+    padding-bottom: 25px;
+  }
+
+  .brand_position h2{
+    margin: 0 0 10px;
+  }
+
+  /* brand info */
+  .project_image_container{
+    width: 100%;   
+  }
+  .brand_position img{
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* brand images */
+  .position_img{
+    width: 100%;   
+  }
+    .position_img li{
+      width: 100%;
+      border: 0;
+      height: auto;
+      overflow: hidden;
+      margin: 0;
+
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+      .position_img a:nth-child(even){
+        padding-left: 5px;
+      }
+      .position_img a:nth-child(odd){
+        padding-right: 5px;
+      }
+      .position_img li img{
+        position: relative;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+  .position_img a{
+    display: block;
+    /*height: 120px;*/
+    overflow: hidden;
+    margin-bottom: 10px;
+    width: 50%;
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /*
+    CONTACTS
+    ========
+  */
+  .contacts_page{
+    display: flex;
+    flex-direction: column;
+  }
+    .contacts_page .new_items{
+      display: none;
+    }
+  .contact_info{
+    padding: 0 15px 30px;
+  }
+    .contact_info h1{
+      font-size: 20px;
+    }
+    .tel,
+    .other_info{
+      font-size: 14px;
+    }
+  .map_wrp{
+    margin: 0 -15px;
+    width: calc(100% + 30px);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+    #map_canvas{
+      width: 100% !important;
+    }
+  .callback{
+    padding: 25px 0 30px;
+  }
+    .callback h2{
+      font-size: 20px;
+    }
+
+    .callback input[type="text"],
+    textarea{
+      width: 100% !important;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .callback .button_more{
+      margin: 10px auto 0;
+      width: 160px;
+      font-size: 20px;
+    }
+    form.go-bottom input[type="text"]:focus{
+      height: 50px;
+    }
+    form.go-bottom label,
+    form.go-bottom #contact_message + label{
+      width: 100%;
+      font-size: 14px;
+    }
+    .callback textarea{
+      height: 100px;
+    }
 }

@@ -1,0 +1,24 @@
+var _display=new displayFunctions();function displayFunctions(){this.showAnswer=showAnswer;this.showMessage=showMessage;this.showStandartMessage=showStandartMessage;this.showCart=showCart;this.showBg=showBg;this.hideBg=hideBg;this.showLoading=showLoading;this.hideLoading=hideLoading;this.unlock=unlock;function showAnswer(message,bg){bg=typeof bg!=='undefined'?bg:true;if(bg==true){this.showBg();}
+$.blockUI({message:message,timeout:2000,showOverlay:false,centerY:false,css:{top:'10px',left:'',right:'10px',border:'none',padding:'5px',backgroundColor:'#000','-webkit-border-radius':'6px','-moz-border-radius':'6px',opacity:.6,color:'#fff'}});}
+function showMessage(message,bg){bg=typeof bg!=='undefined'?bg:true;if(bg==true){this.showBg();}
+$.blockUI({message:message,showOverlay:false,css:{padding:0,margin:0,width:'50%',top:'0%',left:'25%',textAlign:'center',color:'#000',border:'',backgroundColor:'',cursor:'auto'}});}
+this.showAny=function(content,opts,bg){bg=typeof bg!=='undefined'?bg:true;if(bg==true){this.showBg();}
+opts=$.extend({padding:0,margin:0,width:'50%',top:'2%',left:'25%',textAlign:'center',color:'#000',border:'',backgroundColor:'',cursor:'auto'},opts);$.blockUI({message:content,showOverlay:false,css:opts});}
+this.getPageSize=function(){var xScroll,yScroll;if(window.innerHeight&&window.scrollMaxY){xScroll=window.innerWidth+window.scrollMaxX;yScroll=window.innerHeight+window.scrollMaxY;}else if(document.body.scrollHeight>document.body.offsetHeight){xScroll=document.body.scrollWidth;yScroll=document.body.scrollHeight;}else{xScroll=document.body.offsetWidth;yScroll=document.body.offsetHeight;}
+var windowWidth,windowHeight;if(self.innerHeight){if(document.documentElement.clientWidth){windowWidth=document.documentElement.clientWidth;}else{windowWidth=self.innerWidth;}
+windowHeight=self.innerHeight;}else if(document.documentElement&&document.documentElement.clientHeight){windowWidth=document.documentElement.clientWidth;windowHeight=document.documentElement.clientHeight;}else if(document.body){windowWidth=document.body.clientWidth;windowHeight=document.body.clientHeight;}
+if(yScroll<windowHeight){pageHeight=windowHeight;}else{pageHeight=yScroll;}
+if(xScroll<windowWidth){pageWidth=xScroll;}else{pageWidth=windowWidth;}
+arrayPageSize=new Array(pageWidth,pageHeight,windowWidth,windowHeight);return arrayPageSize;}
+this.getPageScroll=function(){var xScroll,yScroll;if(self.pageYOffset){yScroll=self.pageYOffset;xScroll=self.pageXOffset;}else if(document.documentElement&&document.documentElement.scrollTop){yScroll=document.documentElement.scrollTop;xScroll=document.documentElement.scrollLeft;}else if(document.body){yScroll=document.body.scrollTop;xScroll=document.body.scrollLeft;}
+arrayPageScroll=new Array(xScroll,yScroll);return arrayPageScroll;}
+function showCart(message,bg){bg=typeof bg!=='undefined'?bg:true;if(bg==true){this.showBg();}
+$.blockUI({message:message,showOverlay:false,css:{padding:0,margin:0,width:'708px',left:'25%',top:'10%',textAlign:'center',color:'#000',border:'',backgroundColor:'',cursor:'auto',position:'absolute'}});}
+function showStandartMessage(message,bg){bg=typeof bg!=='undefined'?bg:true;if(bg==true){this.showBg();}
+$.blockUI({message:'<div class="showSM"><a class="close" href="#"></a><div>'+message+'</div></div>',showOverlay:false,centerX:true,centerY:true,css:{padding:0,margin:0,width:'30%',height:'150px',textAlign:'center',color:'#000',border:'#000',backgroundColor:' ',cursor:'auto'}});var i=this;$('.close').bind('click',function(){i.unlock(true);});}
+function unlock(bg){bg=typeof bg!=='undefined'?bg:true;if(bg==true){this.hideBg();}
+$.unblockUI();}
+function showBg(){$('body').append('<div class="loading_bg"></div>');}
+function hideBg(){$('.loading_bg').remove();}
+function showLoading(){$('body').append('<div class="loading"></div>');}
+function hideLoading(){$('.loading').remove();}}

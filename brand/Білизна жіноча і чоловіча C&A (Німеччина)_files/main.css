@@ -1,0 +1,704 @@
+*{margin:0; padding: 0;}
+a{text-decoration: none; border: none; outline: none; color: #000;}
+a:hover{text-decoration: none; color: #000;}
+li{list-style: none;}
+img{border: none; outline: none;}
+body{
+    background: #f0f0f0;
+    color: #000;
+    min-width: 960px;
+}
+@font-face{
+    font-family: "Louis-Demi";
+    src: url('fonts/Louis-CondensedDemi.otf'), url('fonts/Louis-CondensedDemi.eot');
+}
+@font-face{
+    font-family: "Louis-Reg";
+    src: url('fonts/Louis-CondensedRegular.otf'), url('fonts/Louis-CondensedRegular.eot');
+}
+@font-face{
+    font-family: "narrow";
+    src: url('fonts/PTN57F_W.ttf'), url('fonts/PTN57F_W.eot');
+}
+@font-face{
+    font-family: "reg";
+    src: url('fonts/Louis-Regular.otf'), url('fonts/PTN57F_W.eot');
+}
+.top_bg{
+    background: #eddcc2;
+    min-width: 1048px;
+    padding-top: 15px;
+    width: 100%;
+}
+.grid_1000{
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 1000px;
+}
+.grid_935{
+    margin: 0 auto;
+    padding-left: 35px;
+    padding-right: 30px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    width: 935px;
+}
+.clearfix{
+    clear: both;
+}
+/* header */
+.header{
+    font-size: 17px;
+    line-height: 25px;
+}
+.header img.logo{
+    float: left;
+    margin-right: 102px;
+}
+.header .social{
+    color: #c01027;
+    float: right;
+    font-family: "Louis-Reg"; 
+    margin-right: 30px;
+}
+.header .social ul{
+    float: right;
+}
+.header .social li{
+    float: left;
+    height: 14px;
+    margin-top: 8px;
+}
+.header .social li a{
+    background: url(images/sprite.png) no-repeat;
+    display: block;
+    height: 14px;
+}
+.header .social li.fb a{
+    background-position: -79px 0px;
+    width: 18px;	
+}
+.header .social li.vk a{
+    background-position: -133px 0px;
+    width: 27px;	
+}
+.header .social li.gplus a{
+    background-position: -209px 0px;
+    width: 20px;
+}
+.header .social li.twit a{
+    background-position: -277px 0px;
+    width: 20px;
+}
+.header .social li.fb:hover a{
+    background-position: -106px 0px;
+}
+.header .social li.vk:hover a{
+    background-position: -171px 0px;
+}
+.header .social li.gplus:hover a{
+    background-position: -243px 0px;
+}
+.header .social li.twit:hover a{
+    background-position: -314px 0px;
+}
+.header .social, .header .contacts{
+    padding-top: 20px;
+}
+.phone, .e-mail{
+    font-family: "Louis-Demi";
+}
+.phone span, .e-mail span{
+    background: url(images/sprite.png) no-repeat;
+    display: block;
+    float: left;
+    height: 20px;
+    width: 32px;
+}
+.e-mail{
+    text-transform: uppercase;
+}
+.e-mail span{
+    background-position: -40px 5px;
+}
+/* nav */
+.nav{
+    background: #c01027;
+    height: 39px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+}
+.nav li{
+    float: left;
+    height: 39px;
+    margin-left: 25px;
+}
+.nav li:first-child{
+    margin-left: 0px;
+}
+.nav a{
+    color: #fff;
+    font-family: "Louis-Demi";
+    font-size: 20px;
+    line-height: 39px;
+    text-transform: uppercase;
+}
+.nav li:hover a, .nav li.current a{
+    color: #fcc734;
+}
+.nav li.nav_1 a{
+    background: url(images/nav_home.jpg) no-repeat;
+    display: block;
+    height: 39px;
+    width: 59px;
+}
+.nav li.nav_7{
+    margin-left: 123px;
+}
+.nav li.nav_8{
+    background: url(images/nav_8.png) repeat-x;
+    float: right;
+}
+.nav li.nav_8 a{
+    color: #c01027;
+    float: right;
+    text-align: center;
+    width: 211px;
+}
+.nav li.nav_8:hover a{
+    color: #000;
+}
+/* slider */
+.slider_shadow{
+    background: url(images/slider_shadow.png) no-repeat 50% 0;
+    height: 456px;
+    margin: -32px auto 0 auto;
+    padding: 32px 0;
+    position: relative;
+    z-index: 1;
+    width: 1047px;
+}
+.cycle-slideshow{
+    /* height: auto; */
+    height: 456px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 1000px;
+}
+.cycle-pager{
+    bottom: 25px;
+    height: 12px;
+    overflow: hidden;
+    position: absolute;
+    right: 30px;
+    z-index: 101;
+}
+.cycle-pager span{
+    background: transparent url(images/sprite_slider.png) 0 0 no-repeat;
+    display: block;
+    cursor: pointer;
+    float: left;
+    height: 12px;
+    margin-left: 14px;
+    text-indent: -9999px;
+    width: 12px;
+}
+.cycle-pager span:hover, .cycle-pager span.cycle-pager-active{
+    background-position: -13px 0;
+}
+/* homepage */
+.content{
+    background: #fff;
+}
+/* right */
+.right_content{
+    background: url(images/border.png) top left repeat-y;
+    float: right;
+    padding-left: 31px;
+    width: 610px;
+}
+.item_wrp{
+    position: relative;
+}
+.item_img{
+    border-bottom: #fff 2px solid;
+    height: 272px;
+    left: 0px;
+    position: absolute;
+    top:0px;
+    width: 610px;
+}
+.item_title{
+    background: #c01027;
+    color: #fff;
+    display: block;
+    height: 38px;
+    float: left;
+    font-family: "Louis-Demi";
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 38px;
+    padding: 0 21px;
+}
+.item_title.yellow{
+    background: #fbc934;
+    color: #000;
+}
+
+.item_title.grey{
+    background: #FFCD76;
+    color: #000;
+}
+.brands{
+    background: #fff;
+    clear: both;
+    height: 100%;
+    margin-left: 30px;
+    width: 80px;
+}
+.item_info{
+    background: #eddcc2;
+    color: #000;
+    font-family: "narrow";
+    font-size: 18px;
+    margin-top: -3px;
+    padding: 15px;
+    position: relative;
+}
+.price{
+    bottom: 15px;
+    position: absolute;
+    right: 15px;
+}
+.brands_lots .margin{
+    margin-left: 10px;
+}
+.bold_text{
+    font-family: "Louis-Demi";
+}
+.item_shadow{
+    background: url(images/item_shadow.png) 0px 0px no-repeat;
+    height: 15px;
+    margin: 0 auto 15px auto;
+    width: 584px;
+}
+/* left */
+.new_items, .brand_position{
+    background: url(images/border.png) top right repeat-y;
+    width: 295px;
+}
+.new_items h2, .brand_position h2, .error h1, .product_none{
+    color: #c01027;
+    font-family: "Louis-Demi";
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.brand_position .item_title.yellow,.brand_position .item_title.grey{
+    text-align: center;
+    width: 218px;
+}
+.new_block{
+    margin: 25px 35px 0 0;
+}
+.date{
+    color: #c01027;
+    font-family: "Louis-Reg";
+    font-size: 16px;
+    line-height: 25px;
+}
+.new_block p, .error p{
+    font-family: "narrow";
+    font-size: 18px;
+    line-height: 20px;
+}
+/* footer */
+.footer{
+    background: #eddcc2;
+}
+.footer_menu_wrp{
+    border-bottom: #c01027 10px solid;
+}
+.footer_menu{
+    height: 47px;
+    margin: 0 auto;
+    text-align: center;
+    width: 600px;
+}
+.footer_menu ul li{
+    float: left;
+}
+.footer_menu ul li a{
+    color: #c01027;
+    font-family: "Louis-Demi";
+    font-size: 20px;
+    height: 47px;
+    line-height: 47px;
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+.footer_menu ul li:first-child a{
+    margin-left: 0px;
+}
+.footer img.logo{
+    float: left;
+    margin: -7px 40px 0 0;
+}
+.footer_text{
+    color: #414142;
+    font-family: "reg";
+    font-size: 13px;
+    line-height: 17px;
+    margin: 5px 0;
+}
+.footer_border{
+    background: url(images/border_footer.png) repeat-x top;
+    margin: 0 auto;
+    width: 1000px; 
+}
+.footer_contacts{
+    padding: 30px 0;
+}
+.footer_contacts .e-mail_wrp{
+    float: right;
+    width: 390px;
+}
+.footer_contacts .e-mail span{
+    background-position: -40px 3px;
+}
+.footer_contacts .phone{
+    float: right;
+    width: 450px;
+}
+.copyright{
+    color: #414142;
+    font-family: "reg";
+    font-size: 12px;
+    padding: 20px 0;
+    text-align: center;
+}
+.copyright p{
+    position: relative;
+}
+.copyright a{
+    color: #414142;
+    text-decoration: underline;
+    position: relative;
+}
+.copyright .welldo_logo{
+    display: block;
+    position: absolute;
+    right: -22px;
+    top: -3px;
+}
+/* pages */
+.slider_shadow_page{
+    background: url(images/slider_shadow_page.png) no-repeat 50% 0;
+    height: 204px;
+    margin: -39px auto 0 auto;
+    padding: 39px 0;
+    position: relative;
+    z-index: 1;
+    width: 1047px;
+}
+.slide{
+    /* height: auto; */
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 1000px;
+}
+/* contacts */
+.contact_info h1{
+    font-family: "Louis-Demi";
+    font-size: 24px;
+}
+.map_wrp{
+    background:#ccc;
+    height: 300px;
+    margin: 35px auto;
+    width: 600px;
+}
+.tel{
+    font-family: "Louis-Demi";
+    font-size: 18px;
+    margin: 25px auto;
+}
+.other_info{
+    font-family: "narrow";
+    font-size: 18px;
+}
+.callback h2{
+    font-family: "narrow";
+    font-size: 25px;
+    font-weight: bolder;
+} 
+
+
+/* form placeholder move */
+.callback input[type="text"]{
+    padding: 15px 18px;
+    width: 330px;
+}
+.callback input[type="text"], .callback textarea{
+    border: #ece9e9 2px solid;
+    background: none;
+    color: #716c6c;
+    font-family: "Louis-Reg";
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+
+}
+.callback input[type="text"], .callback textarea, .callback .button_more{
+    clear: both;
+    display: block;
+    margin-top: 20px;
+    outline: none;
+}
+.callback textarea{
+    height: 280px;
+    padding: 10px 18px;
+    resize: none;
+    width: 564px;
+}
+.callback .button_more{
+    background: #fdc535;
+    border: none;
+    color: #c01027;
+    cursor: pointer;
+    font-family: "Louis-Demi";
+    font-size: 19px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 137px;
+}
+form.go-bottom > div {
+    position: relative;
+    overflow: hidden;
+}
+form.go-bottom input[type="text"]:valid, form.go-bottom textarea:valid {
+    background: white;
+}
+form.go-bottom input[type="text"]:focus, form.go-bottom textarea:focus {
+    border-color: #c01027;
+}
+form.go-bottom input[type="text"]:focus{
+    color: #716c6c;
+    font-family: "Louis-Reg";
+    height: 30px;
+    line-height: 10px;
+    padding: 0px 18px 20px 18px;
+}
+form.go-bottom input[type="text"]:focus + label, form.go-bottom textarea:focus + label {
+    background: #c01027;
+    color: white;
+    font-size: 70%;
+    margin-top: -20px;
+    padding: 4px 18px;
+    text-transform: uppercase;
+    top: 100%;
+    z-index: 2;
+}
+form.go-bottom label {
+    bottom: 0;
+    color: #716c6c;
+    font-family: "Louis-Reg";
+    font-size: 16px;
+    left: 0;
+    padding: 35px 18px 0 18px;
+    position: absolute;
+    top: 0;
+    transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
+    width: 332px;
+}
+form.go-bottom #contact_message + label{
+    width: 566px;
+}
+/*message error form*/
+.loading{
+    background-image: url(images/loader.gif);
+    width:60px;
+    height:60px;
+    position:fixed;
+    top:50%;
+    margin-top:-30px;
+    left:50%;
+    margin-left:-30px;
+    z-index:1001;
+}
+.loading_bg{
+    z-index: 1000; 
+    border: none; 
+    margin: 0px; 
+    padding: 0px; 
+    width: 100%; 
+    height: 100%; 
+    top: 0px; 
+    left: 0px; 
+    background-color: rgb(0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0.6); 
+    cursor: auto; 
+    position: fixed; 
+    opacity: 0.6; 
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+}
+.showSM {
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #ed1c24;
+}
+.showSM .close {
+    display: block;
+    width: 12px;
+    height: 14px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: url(images/error_close.png) 0 0 no-repeat;
+}
+.showSM .close:hover{
+    background-position: -13px 0px;
+}
+.showSM div, .showSM div *  {
+    font-size: 14px;
+}
+.showSM div b {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* clothes_position */
+.brand_position h2{
+    margin: 0 33px 20px 0;
+}
+.brand_position p{
+    font-family: "narrow";
+    font-size: 19px;
+    padding-right: 30px;
+}
+.brand_position img{
+}
+.position_img{
+    width: 630px;
+}
+.position_img li{
+    background: #fff;
+    border: #d8d8d8 1px solid;
+    float: left;
+    display: block;
+    height: 200px;
+    margin: 0 10px 10px 0;
+    position: relative;
+    width: 190px;
+}
+.position_img li:hover{
+    border-color: #db113b;
+}
+.position_img li img{
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+/* error page */
+.error{
+    text-align: center;
+}
+.error p.text{
+    margin-top: 15px;
+}
+.error p.link{
+    margin-top: 30px;
+}
+.error a{
+    color: #c01027;
+    font-size: 19px;
+}
+/* shadow on brands image */
+.project_image_container {
+    height: 136px;
+    margin-bottom: 10px;
+    position: relative;
+    -webkit-box-shadow: 0px 0 1px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0 1px 1px rgba(0, 0 0, 0.5);
+    zoom: 1;
+    width: 260px;
+}
+.container_shadow {
+    width:100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: -1px;
+    left:-1px;
+    background: #fff;  
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='2', MakeShadow='true', ShadowOpacity='.5'); 
+}
+.project_image_item {
+    zoom: 1;
+    position: relative;
+    z-index: 2;
+}
+.new_items.actions{
+    margin-top:30px;
+}
+
+.old_price{
+    font-size: 16px;
+    color: #898989;
+    text-decoration: line-through;
+}
+.action_price{
+    color: #c01027;
+    font-size: 26px;
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 1220px) {
+    body{
+        min-width: 960px;
+        width: 960px;
+    }
+    .header img{
+        margin-left: 10px;
+        margin-right: 92px;
+    }
+    .top_bg{
+        min-width: 960px;
+        width: 960px;
+    }
+    .grid_1000{
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 960px;
+    }
+    .nav li{
+        margin-left: 20px;
+    }
+    .slider_shadow, .cycle-slideshow, .slider_shadow_page, .slide, .footer, .footer_border{
+        width: 960px;
+    }
+    .grid_935{
+        margin: 0;
+        padding-left: 15px;
+        padding-right: 10px;
+    }
+    .footer a.logo{
+        display: block;
+        float: left;
+        height: 80px;
+    }
+    .copyright a.welldo_logo{
+        right: 255px;
+        top:-2px;
+    }
+}

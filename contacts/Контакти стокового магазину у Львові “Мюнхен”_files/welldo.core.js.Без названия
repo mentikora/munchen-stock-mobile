@@ -1,0 +1,41 @@
+var core = new coreFunctions();
+function coreFunctions() {
+    this.init = init;
+    this.initForm = initForm;
+
+    function init() {
+        var i = this;
+        i.initForm($('.callback form'));
+    }
+
+    function initForm(form) {
+        form.ajaxForm({
+            dataType: 'json',
+            beforeSerialize: function() {
+                _display.showBg();
+                _display.showLoading();
+            },
+            success: function(response) {
+                _display.hideLoading();
+                console.log(response);
+                _display.showStandartMessage(response.message, false);
+                $('.close,.loading_bg').bind('click', function() {
+                    event.preventDefault();
+                    if (response.answer == 1) {
+                        form[0].reset();
+                    }
+                    _display.unlock();
+                });
+            },
+            error: function(response) {
+                _display.hideLoading();
+                _display.hideBg();
+                console.log('error');
+                console.log(response);
+            }
+        });
+    }
+}
+$(function() {
+    core.init();
+});
