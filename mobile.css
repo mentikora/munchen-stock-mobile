@@ -26,6 +26,80 @@
     background: none;
   }
 
+  /* item */
+  .item_img{
+    width: 100%;
+    height: calc(100% - 45px);
+    border-bottom: 0;
+  }
+  .item_shadow{
+    width: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .item_wrp > img{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+  }
+  .item_title{
+    font-size: 13px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 15px;
+  }
+  .brands{
+    margin-left: 0;
+    width: 60px;
+    padding: 0 5px;
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+    .brands img{
+      width: 100%;
+      height: auto; 
+    }
+    .brands_lots .margin{
+      display: block;
+      margin-left: 0;
+    }
+    .old_price{
+      font-size: 11px;
+    }
+    .action_price{
+      font-size: 17px;
+    }
+  .item_info{
+    padding: 6px 15px;
+    border-top: 1px solid #fff;
+    font-size: 12px;
+  }
+  .price{
+    bottom: 10px;
+  }
+
+  /*
+    news block
+  */
+  .new_items h2, .brand_position h2, .error h1, .product_none{
+    font-size: 20px;
+  }
+  .new_block{
+    margin-right: 0;
+  }
+    .new_items.actions{
+      margin-top: 0;
+    }
+    .new_block .date{
+      font-size: 11px;
+      line-height: 25px;
+    }
+    .new_block p{
+      font-size: 12px;
+      line-height: 20px;
+    }
+
   /* 
     Footer 
     ======
@@ -50,10 +124,14 @@
     float: none;
     display: inline-block;
   }
+    .footer_menu ul li{
+      margin: 0 8px;
+    }
     .footer_menu ul li a{
       font-size: 18px;
       line-height: 30px;
       color: #fefeff;
+      margin: 0;
     }
   
   /* logo */
