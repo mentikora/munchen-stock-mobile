@@ -1,6 +1,19 @@
+.mobile_nav{
+  height: 0;
+  overflow: hidden;
+
+  transition: height .25s;
+} 
+.mobile_nav_btn{
+  display: none;
+}
+
 @media(max-width: 991px){
   
   /* def's */
+  body{
+    background: #fff;
+  }
   body, .slider_shadow, .cycle-slideshow, .slider_shadow_page, .slide, .footer, .top_bg, .footer_menu{
     width: 100%;
     min-width: 100%;
@@ -26,10 +39,155 @@
     background: none;
   }
 
-  /* slider */
+  /*
+    Header
+    ======
+  */
+  .top_bg{
+    padding-top: 0;
+    background: #fff;
+  }
+  header{
+    background: #fff;
+    height: 60px;
+  }
+    header a{
+      margin-top: 10px;
+      display: block;
+      float: left;
+    }
+    header img{
+      width: 125px;
+      height: auto;
+    }
+    .header .social, 
+    .header .contacts{ display: none; }
 
+    .mobile_nav_btn{
+      display: block;
+      float: right;
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+      margin: 23px 15px 0 0;
+      position: relative;
+    }
 
-  /* item */
+    .mobile_nav_btn span{
+      position: relative;
+      display: block;
+      height: 2px;
+      background: #898989;
+      margin-bottom: 3px;
+      border-radius: 2px;
+      box-shadow: 0 0 1px 0 #898989;
+
+      transition: all .25s;
+    }
+    .mobile_nav_btn.active span:first-child,
+    .mobile_nav_btn.active span:last-child{
+      top: 7px;
+      left: 0;
+      width: 100%;
+      position: absolute;
+    }
+    
+    .mobile_nav_btn.active span:first-child{
+      transform: rotate(45deg);
+    }
+    .mobile_nav_btn.active span:last-child{
+      transform: rotate(-45deg);
+    }
+    .mobile_nav_btn.active span:nth-child(even){
+      display: none;
+    }
+
+  .slider_shadow{
+    background: none;
+    padding: 0;
+    margin: 0 0 30px;
+  }
+
+  /* 
+    MainNavigation
+    ==============
+  */
+  nav{
+    display: none;
+  }
+
+  .mobile_nav{
+    background: #c01027;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+  }
+    .mobile_nav.active{
+      height: 357px;
+    }
+    .mobile_nav li{
+      border-top: 1px solid #fff;
+    }
+      .mobile_nav li:last-child a{
+        color: #c01027;
+        background: #fbcb33;
+      }
+    .mobile_nav a{
+      display: block;
+      padding: 0 15px;
+      height: 50px;
+      line-height: 50px;
+      
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #fff;
+      font-family: "Louis-Demi", sans-serif;
+    }
+
+  /* 
+    Slider
+    ======
+  */
+  .slider_shadow,
+  .cycle-slideshow{
+    height: 200px;
+  }
+  .cycle-slideshow img{
+    height: auto;
+  }
+  .cycle-pager{
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 15px;
+  }
+  .cycle-pager span{ 
+    float: none; 
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background-color: #eddcc2;
+    background-image: none;
+    border-radius: 50%;
+    position: relative;
+  }
+  .cycle-pager .cycle-pager-active:after{
+    content: '';
+    width: 3px;
+    height: 3px;
+    background: #c14540;
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+  }
+    
+
+  /* 
+    Item 
+    ====
+  */
   .item_img{
     width: 100%;
     height: calc(100% - 45px);
@@ -54,7 +212,6 @@
   .brands{
     margin-left: 0;
     width: 60px;
-    padding: 0 5px;
 
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -188,4 +345,151 @@
     top: 0;
   }
 
+  /*
+    CATEGORY
+    ========
+  */
+  .slider_shadow_page{
+    background: 0;
+    padding: 0;
+    margin: 0 0 30px;
+  }
+  
+
+  /*
+    BRAND
+    =====
+  */
+  .brand_content{
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    width: calc(100% - 60px);
+  }
+
+  .brand_content .brand_position{
+    order: 1;
+    width: 100%;
+    background: none;
+    padding-bottom: 30px;
+  }
+    .brand_position p{
+      padding: 0;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  .brand_content .right_content{
+    order: 2;
+    padding-bottom: 25px;
+  }
+
+  .brand_position h2{
+    margin: 0 0 10px;
+  }
+
+  /* brand info */
+  .project_image_container{
+    width: 100%;   
+  }
+  .brand_position img{
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* brand images */
+  .position_img{
+    width: 100%;   
+  }
+    .position_img li{
+      width: 100%;
+      border: 0;
+      height: auto;
+      overflow: hidden;
+      margin: 0;
+
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+      .position_img a:nth-child(even){
+        padding-left: 5px;
+      }
+      .position_img a:nth-child(odd){
+        padding-right: 5px;
+      }
+      .position_img li img{
+        position: relative;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+  .position_img a{
+    display: block;
+    /*height: 120px;*/
+    overflow: hidden;
+    margin-bottom: 10px;
+    width: 50%;
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /*
+    CONTACTS
+    ========
+  */
+  .contacts_page{
+    display: flex;
+    flex-direction: column;
+  }
+    .contacts_page .new_items{
+      display: none;
+    }
+  .contact_info{
+    padding: 0 15px 30px;
+  }
+    .contact_info h1{
+      font-size: 20px;
+    }
+    .tel,
+    .other_info{
+      font-size: 14px;
+    }
+  .map_wrp{
+    margin: 0 -15px;
+    width: calc(100% + 30px);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+    #map_canvas{
+      width: 100% !important;
+    }
+  .callback{
+    padding: 25px 0 30px;
+  }
+    .callback h2{
+      font-size: 20px;
+    }
+
+    .callback input[type="text"],
+    textarea{
+      width: 100% !important;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .callback .button_more{
+      margin: 10px auto 0;
+      width: 160px;
+      font-size: 20px;
+    }
+    form.go-bottom input[type="text"]:focus{
+      height: 50px;
+    }
+    form.go-bottom label,
+    form.go-bottom #contact_message + label{
+      width: 100%;
+      font-size: 14px;
+    }
+    .callback textarea{
+      height: 100px;
+    }
 }
