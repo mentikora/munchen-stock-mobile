@@ -142,6 +142,45 @@
       color: #fff;
       font-family: "Louis-Demi", sans-serif;
     }
+
+  /* 
+    Slider
+    ======
+  */
+  .slider_shadow,
+  .cycle-slideshow{
+    height: 200px;
+  }
+  .cycle-slideshow img{
+    height: auto;
+  }
+  .cycle-pager{
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 15px;
+  }
+  .cycle-pager span{ 
+    float: none; 
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background-color: #eddcc2;
+    background-image: none;
+    border-radius: 50%;
+    position: relative;
+  }
+  .cycle-pager .cycle-pager-active:after{
+    content: '';
+    width: 3px;
+    height: 3px;
+    background: #c14540;
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+  }
     
 
   /* 
