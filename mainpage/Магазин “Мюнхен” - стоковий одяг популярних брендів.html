@@ -84,16 +84,26 @@
             <script>
 
               document.ready = function(){
-                const mobileBtn = document.querySelector('.mobile_nav_btn');
-                const mobileMenu = document.querySelector('.mobile_nav');
 
-                mobileBtn.addEventListener( 
-                  "click", 
-                  function(){ 
-                    mobileBtn.classList.toggle('active');
-                    mobileMenu.classList.toggle('active');
-                  }, 
-                  false);
+                // mobile menu
+                const mobileBtn = document.querySelector('.mobile_nav_btn'),
+                      mobileMenu = document.querySelector('.mobile_nav');
+
+                mobileBtn.addEventListener("click", function(){ 
+                  mobileBtn.classList.toggle('active');
+                  mobileMenu.classList.toggle('active');
+                }, 
+                false);
+
+                //banner contacts
+                const mobileContactsBtn = document.querySelectorAll('.mobile_contacts div');
+
+                for(var i = 0; i < mobileContactsBtn.length; i++){
+                  mobileContactsBtn[i].addEventListener("click", function(event){
+                    event.stopPropagation();
+                    this.classList.toggle('active');
+                  }, false);
+                }
               }
 
             </script>
@@ -113,6 +123,32 @@
           <li><a href="javascript:void(0);">Контакти</a></li>
           <li><a href="javascript:void(0);">Зворотній зв’язок</a></li>
         </ul>
+        
+        <!-- 
+          New mobile banner contacts
+        -->
+        <div class="mobile_contacts">
+          <div class="m_tel">38 097 134 55 78   |  38 050 370 26 38  |  38 067 740 29 20</div>
+          <div class="m_mail">
+            <a href="mailto:office@munhen-stock.com.ua">
+              office@munhen-stock.com.ua
+            </a>
+          </div>
+          <div class="m_share active">
+            <a href="http://munhen-stock.com.ua/#" target="_blank">
+              <img src="m_fb.png" alt="m_fb">
+            </a>
+            <a href="http://munhen-stock.com.ua/#" target="_blank">
+              <img src="m_vk.png" alt="m_vk">
+            </a>
+            <a href="http://munhen-stock.com.ua/#" target="_blank">
+              <img src="m_gp.png" alt="m_gp">
+            </a>
+            <a href="http://munhen-stock.com.ua/#" target="_blank">
+              <img src="m_tw.png" alt="m_tw">
+            </a>
+          </div>
+        </div>
 
         <nav>
           <div class="grid_1000">
