@@ -252,9 +252,44 @@
   }
   .item_shadow{
     width: 100%;
-    -webkit-background-size: cover;
-    background-size: cover;
+    background: none;
   }
+  /**/
+  .item_wrp{
+    z-index: 2;
+  }
+    .item_wrp:before,
+    .item_wrp:after{
+      z-index: -1;
+      position: absolute;
+      content: "";
+      bottom: 15px;
+      left: 10px;
+      width: 50%;
+      top: 80%;
+      /*max-width: 300px;*/
+      background: rgba(0,0,0, .3);
+      -webkit-box-shadow: 0 15px 10px rgba(0,0,0, .3);;
+      -moz-box-shadow: 0 15px 10px rgba(0,0,0, .3);;
+      box-shadow: 0 15px 10px rgba(0,0,0, .3);;
+    }
+    .item_wrp:before{
+      -webkit-transform: rotate(-3deg);
+      -moz-transform: rotate(-3deg);
+      -o-transform: rotate(-3deg);
+      -ms-transform: rotate(-3deg);
+      transform: rotate(-3deg);
+    }
+    .item_wrp:after{
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      transform: rotate(3deg);
+      right: 10px;
+      left: auto;
+    }
+  /**/
   .item_wrp > img{
     display: inline-block;
     width: 100%;
@@ -291,9 +326,29 @@
     padding: 6px 15px;
     border-top: 1px solid #fff;
     font-size: 12px;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
   .price{
-    bottom: 10px;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+
+    position: relative;
+    bottom: 0px;
+    right: 0;
   }
 
   /*
@@ -418,8 +473,14 @@
     =====
   */
   .brand_content{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+
     padding: 0 30px;
     width: calc(100% - 60px);
   }
@@ -495,7 +556,12 @@
     ========
   */
   .contacts_page{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
     .contacts_page .new_items{
